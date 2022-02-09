@@ -6,7 +6,7 @@ interface useProductArgs {
   onChange?: (args: OnChangeArgs) => void;
   value?: number;
   initialValues?: InitialValues;
-}
+};
 
 const useProduct = ({ onChange, product, value = 0, initialValues }: useProductArgs) => {
   const [counter, setCounter] = useState<number>(initialValues?.count || value);
@@ -30,11 +30,11 @@ const useProduct = ({ onChange, product, value = 0, initialValues }: useProductA
     }
     setCounter(newValue);
     onChange && onChange({ count: newValue, product })
-  }
+  };
 
   const reset = () => {
     setCounter(initialValues?.count || value);
-  }
+  };
 
 
   return {
