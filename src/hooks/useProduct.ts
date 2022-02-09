@@ -12,8 +12,6 @@ const useProduct = ({ onChange, product, value = 0, initialValues }: useProductA
   const [counter, setCounter] = useState<number>(initialValues?.count || value);
   const isMounted = useRef(false);
 
-  console.log(initialValues?.count)
- 
   useEffect(() => {
     if(!isMounted.current) return;
     setCounter(value)
